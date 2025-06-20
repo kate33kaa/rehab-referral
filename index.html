@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Find Rehab Support</title>
   <style>
     body {
@@ -97,9 +97,9 @@
       <h2>Get Help Now</h2>
       <form name="rehab-contact" method="POST" data-netlify="true" netlify-honeypot="bot-field">
         <input type="hidden" name="form-name" value="rehab-contact" />
-        <div style="display:none;">
-          <label>Don’t fill this out if you're human: <input name="bot-field" /></label>
-        </div>
+        <p hidden>
+          <label>Don’t fill this out: <input name="bot-field" /></label>
+        </p>
         <input type="text" name="name" placeholder="Your Name" required />
         <input type="email" name="email" placeholder="Your Email" required />
         <input type="tel" name="phone" placeholder="Your Phone Number (Optional)" />
@@ -109,14 +109,16 @@
     </section>
   </div>
 
+  <!-- This hidden form helps Netlify detect your form at build time -->
+  <form name="rehab-contact" data-netlify="true" hidden>
+    <input type="text" name="name" />
+    <input type="email" name="email" />
+    <input type="tel" name="phone" />
+    <textarea name="message"></textarea>
+  </form>
+
   <footer>
     &copy; 2025 Rehab Referral Support | Confidential & Compassionate Help
   </footer>
 </body>
 </html>
-<!-- Hidden form to trigger Netlify form detection -->
-<form name="rehab-contact" data-netlify="true" hidden>
-  <input type="text" name="name" />
-  <input type="email" name="email" />
-  <textarea name="message"></textarea>
-</form>
