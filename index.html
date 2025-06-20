@@ -101,11 +101,18 @@
     <input type="email" name="email" placeholder="Your Email" required />
     <input type="tel" name="phone" placeholder="Your Phone Number (Optional)" />
     <textarea name="message" placeholder="Tell me a bit about your situation (confidential)"></textarea>
-    <button type="submit">Send Request</button>
+    <button type="submit">Send Request</button><!-- Netlify Form Hidden Template -->
+<form name="rehab-contact" netlify netlify-honeypot="bot-field" hidden>
+  <input type="text" name="name" />
+  <input type="email" name="email" />
+  <input type="tel" name="phone" />
+  <textarea name="message"></textarea>
+</form>
+
   </form>
 </section>
 
-    </section>
+
   </div>
 
   <footer>
