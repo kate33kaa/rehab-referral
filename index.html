@@ -94,25 +94,19 @@
     </section>
 
     <section id="contact">
-  <h2>Get Help Now</h2>
-  <form name="rehab-contact" method="POST" data-netlify="true">
-    <input type="hidden" name="form-name" value="rehab-contact" />
-    <input type="text" name="name" placeholder="Your Name" required />
-    <input type="email" name="email" placeholder="Your Email" required />
-    <input type="tel" name="phone" placeholder="Your Phone Number (Optional)" />
-    <textarea name="message" placeholder="Tell me a bit about your situation (confidential)"></textarea>
-    <button type="submit">Send Request</button><!-- Netlify Form Hidden Template -->
-<form name="rehab-contact" netlify netlify-honeypot="bot-field" hidden>
-  <input type="text" name="name" />
-  <input type="email" name="email" />
-  <input type="tel" name="phone" />
-  <textarea name="message"></textarea>
-</form>
-
-  </form>
-</section>
-
-
+      <h2>Get Help Now</h2>
+      <form name="rehab-contact" method="POST" data-netlify="true" netlify-honeypot="bot-field">
+        <input type="hidden" name="form-name" value="rehab-contact" />
+        <p hidden>
+          <label>Don’t fill this out if you're human: <input name="bot-field" /></label>
+        </p>
+        <input type="text" name="name" placeholder="Your Name" required />
+        <input type="email" name="email" placeholder="Your Email" required />
+        <input type="tel" name="phone" placeholder="Your Phone Number (Optional)" />
+        <textarea name="message" placeholder="Tell me a bit about your situation (confidential)"></textarea>
+        <button type="submit">Send Request</button>
+      </form>
+    </section>
   </div>
 
   <footer>
